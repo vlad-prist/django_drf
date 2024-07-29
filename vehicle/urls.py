@@ -9,7 +9,7 @@ from vehicle.views import (
     MotoListAPIView,
     MotoRetrieveAPIView,
     MotoUpdateAPIView,
-    MotoDestroyAPIView, MilageCreateAPIView,
+    MotoDestroyAPIView, MilageCreateAPIView, MotoMilageListAPIView
 )
 
 app_name = VehicleConfig.name
@@ -23,5 +23,7 @@ urlpatterns = [
     path("moto/<int:pk>/", MotoRetrieveAPIView.as_view(), name="moto-get"),
     path("moto/update/<int:pk>/", MotoUpdateAPIView.as_view(), name="moto-update"),
     path("moto/delete/<int:pk>/", MotoDestroyAPIView.as_view(), name="moto-delete"),
+
     path("milage/create/", MilageCreateAPIView.as_view(), name="milage-create"),
+    path("moto/milage/", MotoMilageListAPIView.as_view(), name="moto-milage"),
 ] + router.urls
