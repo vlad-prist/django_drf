@@ -1,0 +1,10 @@
+[
+{
+  "model": "vehicle.car",
+  "pk": 2,
+  "fields": {
+    "title": "Audi A3",
+    "description": "German car"
+  }
+}
+]

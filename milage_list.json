@@ -1,0 +1,22 @@
+[
+{
+  "model": "vehicle.milage",
+  "pk": 1,
+  "fields": {
+    "car": 2,
+    "moto": null,
+    "milage": 10000,
+    "year": 2014
+  }
+},
+{
+  "model": "vehicle.milage",
+  "pk": 2,
+  "fields": {
+    "car": null,
+    "moto": 2,
+    "milage": 2000,
+    "year": 2023
+  }
+}
+]
