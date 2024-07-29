@@ -29,8 +29,8 @@ class MotoSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def get_last_milage(self, obj):
-        if obj.milage_set.all().first():
-            return obj.milage_set.all().first().milage
+        if obj.milage.all().first():
+            return obj.milage.all().first().milage
         return 0
 
 
@@ -40,3 +40,18 @@ class MotoMilageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Milage
         fields = ('milage', 'year', 'moto',)
+
+
+class MotoCreateSerializer(serializers.ModelSerializer):
+    milage = MilageSerializer(many=True)
+
+    class Meta:
+        model = Moto
+        fields = '__all__'
+
+    def create(self, validated_data):
+        milage = validated_data.pop('milage')
+        moto_item = Moto.objects.create(**validated_data)
+        for m in milage:
+            Milage.objects.create(**m, moto=moto_item)
+        return moto_item
