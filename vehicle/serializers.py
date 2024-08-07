@@ -11,11 +11,11 @@ class MilageSerializer(serializers.ModelSerializer):
 
 
 class CarSerializer(serializers.ModelSerializer):
-    last_milage = serializers.IntegerField(source='milage_set.all.first.milage')
+    last_milage = serializers.IntegerField(source='milage_set.all.first.milage', read_only=True)
     #milage_set - походу это related_name
     #first - порядковый номер объекта (потому что у нас год в Модели указан минус year)
     #milage - поле, в котором хранится милаж
-    milage = MilageSerializer(source='milage_set', many=True)
+    milage = MilageSerializer(source='milage_set', many=True, read_only=True)
 
     class Meta:
         model = Car
