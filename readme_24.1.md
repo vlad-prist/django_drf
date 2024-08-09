@@ -43,13 +43,13 @@ pip install djangorestframework
 
 
 Подсчет покрытия тестами
-
 Для подсчета покрытия тестами используется специальный пакет 
-
 pip install coverage
-
 После установки важно запустить подсчет покрытия и вывести отчет:
-
 coverage run --source='.' manage.py test
-
 coverage report
+
+drf-yasg
+Для установки drf-yasg - переходим на оф сайт и следуем инструкции
+https://drf-yasg.readthedocs.io/en/stable/readme.html#usage
+далее устанавливаем pip install setuptools
