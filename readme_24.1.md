@@ -53,3 +53,9 @@ drf-yasg
 Для установки drf-yasg - переходим на оф сайт и следуем инструкции
 https://drf-yasg.readthedocs.io/en/stable/readme.html#usage
 далее устанавливаем pip install setuptools
+
+CORS
+https://pypi.org/project/django-cors-headers/
+Устанавливаем, через pip install
+добавляем в settings.py в INSTALLED_APPS, MIDDLEWEARS, а также добавляем CORS_ALLOWED_ORIGINS, CSRF_TRUSTED_ORIGINS
+]
