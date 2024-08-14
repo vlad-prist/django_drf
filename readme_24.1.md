@@ -77,3 +77,8 @@ https://skillbox.ru/media/base/kak_ustanovit_redis_v_os_windows_bez_ispolzovaniy
 Создали задачу в tasks.py 
 перенесли задачу в контроллер MilageCreateAPIView
 запустили celery
+
+Периодическую задачу можно настроить в админке, создав Periodic Tasck, в ней прописать кастомную задаяу
+пример: vehicle.tasks.check_filter
+выбрать Interval Schedule
+Save)
