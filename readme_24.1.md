@@ -59,3 +59,21 @@ https://pypi.org/project/django-cors-headers/
 Устанавливаем, через pip install
 добавляем в settings.py в INSTALLED_APPS, MIDDLEWEARS, а также добавляем CORS_ALLOWED_ORIGINS, CSRF_TRUSTED_ORIGINS
 ]
+
+26.2/1 Celery.
+pip install celery
+pip install eventlet
+pip install redis
+About Celery:
+https://docs.celeryq.dev/en/stable/django/first-steps-with-django.html
+About Reddis:
+https://skillbox.ru/media/base/kak_ustanovit_redis_v_os_windows_bez_ispolzovaniya_docker/?topic=base&section=kak_ustanovit_redis_v_os_windows_bez_ispolzovaniya_docker
+
+26.2/2 В PowerShell активировали redis:
+1 окно: redis-server
+2 окно: redis-cli
+
+Добавили настройки redis в settings.py
+Создали задачу в tasks.py 
+перенесли задачу в контроллер MilageCreateAPIView
+запустили celery
